@@ -42,22 +42,50 @@
 // console.log(coffeeMaker("Mocha"))
 // console.log(coffeeMaker("Tuxedo"))
 
-// add multiple parameters
-const coffeeMaker = (coffeeType, coffeeSize) => {
-  // string interpolation
-  return `Your ${coffeeSize} ${coffeeType} is made`
-}
-// console.log(coffeeMaker("Tuxedo", "large"))
-// --> Your large Tuxedo is made
-// console.log(coffeeMaker("large", "Tux"))
-// --> Your Tux large is made
+// // add multiple parameters
+// const coffeeMaker = (coffeeType, coffeeSize) => {
+//   // string interpolation
+//   return `Your ${coffeeSize} ${coffeeType} is made`
+// }
+// // console.log(coffeeMaker("Tuxedo", "large"))
+// // --> Your large Tuxedo is made
+// // console.log(coffeeMaker("large", "Tux"))
+// // --> Your Tux large is made
 
-const myLatte = "latte"
-// console.log(coffeeMaker(myLatte, "medium"))
-// --> Your medium latte is made
+// const myLatte = "latte"
+// // console.log(coffeeMaker(myLatte, "medium"))
+// // --> Your medium latte is made
 
-// --> latte is made
-// console.log(coffeeMaker("Leo"))
-// console.log(coffeeMaker(8))
-console.log(coffeeMaker("large"))
+// // --> latte is made
+// // console.log(coffeeMaker("Leo"))
+// // console.log(coffeeMaker(8))
+// console.log(coffeeMaker("large"))
 // --> Your undefined large is made
+
+// Pseudocode:
+// create a function named morningCoffee
+// input - coffeeType / coffeeSize
+// output - coffeePrice
+// within my function I want to use a conditional statement
+// string interpolate my coffeType/ size and determine what price is returned
+// if coffee is $5 -- would be a large coffee
+// if coffee is $4 -- would be a medium coffee
+// if coffee is $3 -- would be a small coffee
+// if other is given than return an error message
+
+const morningCoffee = (coffeeType, coffeeSize) => {
+  if (coffeeSize === "large") {
+    return `Your ${coffeeSize} ${coffeeType} is going to be $5, please.`
+  } else if (coffeeSize === "medium") {
+    return `Your ${coffeeSize} ${coffeeType} is going to be $4, please.`
+  } else if (coffeeSize === "small") {
+    return `Your ${coffeeSize} ${coffeeType} is going to be $3, please.`
+  } else {
+    return "I would really like it if you provided me with a coffee size and type. Try again!"
+  }
+}
+
+// console.log(morningCoffee("mocha", "large")) --> Your large mocha is going to be $5, please.
+// console.log(morningCoffee("Pumpkin Spice", "medium")) --> Your medium Pumpkin Spice is going to be $4, please.
+// console.log(morningCoffee("Pumpkin Spice", "small")) --> Your small Pumpkin Spice is going to be $3, please.
+// console.log(morningCoffee(2, 0)) --> I would really like it if you provided me with a coffee size and type. Try again!
