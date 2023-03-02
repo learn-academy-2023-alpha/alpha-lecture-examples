@@ -1,0 +1,11 @@
+.card {
+  border: 2px solid black;
+  height: 400px;
+  width: 300px;
+  padding: 20px;
+}
+
+.episode-cards {
+  display: flex;
+  justify-content: space-evenly;
+}
